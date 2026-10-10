@@ -164,6 +164,6 @@ Please cite the paper when using this method:
 }
 ```
 
-Original code is released under [Apache-2.0](LICENSE). Upstream code and datasets retain their own terms; see [THIRD_PARTY.md](THIRD_PARTY.md).
+Original code is released under the [MIT License](LICENSE). Upstream code and datasets retain their own terms; see [THIRD_PARTY.md](THIRD_PARTY.md).
 
 Repository layout: `src/cce_mobility/` contains method code and workflows, `configs/` contains templates, `scripts/` contains the upstream MobilityBench Shell launcher, and `tools/` contains release auditing tools. Use the `cce` CLI for the main experiment stages and `python -m cce_mobility.workflows.<group>.<module>` for advanced workflows. [Development guide](docs/development.md).

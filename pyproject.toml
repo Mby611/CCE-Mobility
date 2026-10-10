@@ -5,6 +5,7 @@ description = "CCE-Mobility: Counterfactual World-Agent Co-Evolution for Mobilit
 readme = "README.md"
 requires-python = ">=3.12"
 license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
 dependencies = [
   "pydantic>=2.7",
 ]

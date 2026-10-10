@@ -12,6 +12,6 @@ This repository publishes original CCE-Mobility methods, adapters, synthetic fix
 | Reflexion | https://github.com/noahshinn/reflexion | Cited method; our benchmark-specific adaptation is not a copy of its complete runtime. |
 | Voyager | https://github.com/MineDojo/Voyager | Cited method; our benchmark-specific adaptation is not its Minecraft runtime. |
 
-Apache-2.0 applies to original code in this repository, not to downloaded third-party inputs. Prepared source and dataset revisions are recorded per experiment. Do not redistribute official data or sandbox files based solely on our license.
+The MIT License applies to original code in this repository, not to downloaded third-party inputs. Prepared source and dataset revisions are recorded per experiment. Do not redistribute official data or sandbox files based solely on our license.
 
 TP evaluator compatibility changes the local query-loading interface and subset denominators while retaining upstream constraint functions. MB compatibility code controls explicit inference parameters and runtime lifetimes. See the reproduction guides for scope and recorded hashes.

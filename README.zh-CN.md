@@ -155,6 +155,6 @@ See [metric definitions](docs/metrics.md) and [evaluation protocol](docs/protoco
 
 引用信息与英文版一致，题目：CCE-Mobility: Counterfactual World-Agent Co-Evolution for Mobility Agents，2027。
 
-原创代码采用 [Apache-2.0](LICENSE)。第三方代码、数据及其许可独立保留，见 [THIRD_PARTY.md](THIRD_PARTY.md)。
+原创代码采用 [MIT License](LICENSE)。第三方代码、数据及其许可独立保留，见 [THIRD_PARTY.md](THIRD_PARTY.md)。
 
 方法实现和工作流统一放在 `src/cce_mobility/`；`configs/` 存放实验配置，`scripts/` 仅保留 MobilityBench 官方程序的 Shell 启动脚本，`tools/` 存放仓库检查和发布审计工具。主流程使用 `cce` 命令，高级工作流使用 `python -m cce_mobility.workflows.<group>.<module>`，不再提供重复的外层 Python 转发脚本。目录结构与开发说明见[开发指南](docs/development.md)。
