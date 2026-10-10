@@ -1,0 +1,33 @@
+{
+  "units": "Phase updates are memory updates, not complete co-evolution cycles or model weight-training epochs.",
+  "strict_paired_default": {
+    "archived_tp_config_sha256": "a1f955594a50364deb52fa5e80eb378ad04c6d3853711b8de7983e1d615f933f",
+    "travelplanner_train_tasks": 45,
+    "mobilitybench_train_tasks_per_cycle": 20,
+    "cycles": 3,
+    "agent_evaluations_per_cycle": 3,
+    "phase_update_cap": 42,
+    "executed_phase_updates_per_full_cycle": 2,
+    "counterfactuals_selected_per_train_task": 1
+  },
+  "archived_adaptive_travelplanner": {
+    "archived_config_sha256": "ee87f5359cf311b1b3233fd2783a1f2fc79708c1de5e8530c586a1dfa2317001",
+    "train_tasks": 45,
+    "agent_phase_min_updates": 3,
+    "agent_phase_max_updates": 8,
+    "world_phase_min_updates": 2,
+    "world_phase_max_updates": 6,
+    "patience": 2,
+    "max_cycles": 3,
+    "max_phase_updates": 42,
+    "stop_after_unproductive_cycles": 2,
+    "selected_challenges_per_task": 2,
+    "seed": 42,
+    "execution": "Archival budget reference; not the strict paired CLI scheduler."
+  },
+  "mechanism_protocol": {
+    "variants": ["full", "agent-only", "without-memory-curation"],
+    "final_same_challenge_reevaluation": true,
+    "world_update_requires_final_F_to_F": true
+  }
+}

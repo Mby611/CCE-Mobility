@@ -1,0 +1,32 @@
+name: CCE checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python -m pip install -e '.[dev,mobilitybench,travelplanner]'
+      - name: Test
+        run: python -m pytest -q
+      - name: Lint
+        run: ruff check . && ruff format --check .
+      - name: Offline synthetic smoke
+        run: cce run-config configs/smoke/travelplanner_offline.json
+      - name: Offline MobilityBench smoke
+        run: cce run-config configs/smoke/mobilitybench_mock.json
+      - name: Check documentation and release hygiene
+        run: python tools/check_repository.py
+      - name: Audit publication files and Git history
+        run: python tools/audit_publication.py
+      - name: Verify source export
+        run: python tools/build_public_candidate.py --output-dir "${RUNNER_TEMP}/CCE-Mobility" && python tools/build_public_candidate.py --verify-dir "${RUNNER_TEMP}/CCE-Mobility"

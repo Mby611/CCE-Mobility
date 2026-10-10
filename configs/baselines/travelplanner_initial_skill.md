@@ -1,0 +1,1 @@
+Given the user request and currently available information, construct a complete plan that respects the stated constraints. When the environment changes, identify invalidated dependencies, recover with supported alternatives, and communicate the verified plan without inventing unavailable resources.

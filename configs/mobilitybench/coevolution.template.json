@@ -1,0 +1,35 @@
+{
+  "schema_version": "mobilitybench-formal-coevolution-train-v1",
+  "method_version": "cce_mobility_paired_residual_v1",
+  "experiment_name": "mobilitybench_cce",
+  "output_root": "outputs/mobilitybench_cce",
+  "seed": 42,
+  "cycles": 3,
+  "train_task_count": 20,
+  "task_schedule_mode": "disjoint_without_replacement",
+  "training_evidence_min_valid_fraction": 1.0,
+  "official_model_alias": "cce-agent",
+  "max_case_attempts": 2,
+  "agent": {},
+  "world_model": {},
+  "judge": {},
+  "intervention": {
+    "policy": "ontology",
+    "candidate_budget": 5,
+    "selected_budget": 1,
+    "dimensions": ["road_blocked", "congestion_spike", "eta_shift", "poi_closed", "pickup_point_unreachable", "parking_unavailable", "charging_unavailable", "restriction_policy_changed", "weather_degraded", "tool_empty_result", "tool_conflicting_info"],
+    "severity_grid": [1.0],
+    "validity_threshold": 0.7,
+    "frontier_low": 0.4,
+    "frontier_high": 0.6
+  },
+  "retrieval": {"enabled": true, "max_skills": 2, "catalog_limit": 8, "heuristic_fallback_on_error": false},
+  "lifecycle": {"min_support": 3},
+  "acceptance": {"min_lifecycle_score": 0.0, "min_mean_delta": -0.05, "max_low_score_delta": 0.05, "max_unavailable_delta": 0.02, "min_final_pass_delta": -0.05, "max_success_to_failure_rate": 0.1},
+  "ontology_discovery_limit": 8,
+  "official_runtime_env": {
+    "CCE_MOBILITYBENCH_DISABLE_THINKING": "0",
+    "CCE_MOBILITYBENCH_FORCE_TOOL_CHOICE_REQUIRED": "0",
+    "CCE_MOBILITYBENCH_LOOP_SAFE_ASYNC_CLIENT": "1"
+  }
+}

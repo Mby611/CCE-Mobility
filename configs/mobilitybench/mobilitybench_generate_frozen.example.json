@@ -1,0 +1,27 @@
+{
+  "experiment_name": "mb_public_generate_frozen_smoke",
+  "output_dir": "runs",
+  "method": "official_posthoc_no_evolution",
+  "iterations": 1,
+  "seed": 42,
+  "benchmark": {
+    "name": "mobilitybench",
+    "data_path": "runs/local_data/mb_smoke/cce_factual_records.jsonl",
+    "split": "local_smoke",
+    "limit": 2
+  },
+  "agent": {"model": "placeholder-agent", "provider": "placeholder"},
+  "world_model": {"model": "placeholder-wm", "provider": "placeholder"},
+  "judge": {"model": "placeholder-judge", "provider": "placeholder"},
+  "intervention": {
+    "policy": "grid",
+    "candidate_budget": 2,
+    "selected_budget": 1,
+    "dimensions": ["poi_closed", "road_blocked", "tool_empty_result"],
+    "severity_grid": [1.0],
+    "validity_threshold": 0.7,
+    "frontier_low": 0.4,
+    "frontier_high": 0.6
+  },
+  "extra": {"refuse_overwrite": true, "require_full_coverage": true}
+}

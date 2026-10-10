@@ -1,0 +1,3 @@
+case_id,query,city,context,tool_list,poi_result
+mock-1,Find a nearby pharmacy,Example City,The first pharmacy is closed,[],Pharmacy A is currently unavailable
+mock-2,Plan a route to the library,Example City,Main Street is blocked,[],A route via Second Street is available

@@ -1,0 +1,75 @@
+{
+  "schema_version": "travelplanner-memory-curation-ablation-v1",
+  "experiment_name": "tp_public_template_memory_curation_ablation",
+  "output_root": "outputs/travelplanner",
+  "seed": 42,
+  "cycles": 3,
+  "train_task_count": 45,
+  "benchmark": {
+    "repo_path": "third_party/TravelPlanner",
+    "train_data_path": "data/travelplanner/train_ref_info.jsonl",
+    "validation_data_path": "data/travelplanner/validation_ref_info.jsonl",
+    "test_data_path": "data/travelplanner/test_ref_info.jsonl"
+  },
+  "agent": {},
+  "world_model": {},
+  "judge": {},
+  "train_intervention": {
+    "policy": "ontology",
+    "candidate_budget": 4,
+    "selected_budget": 1,
+    "dimensions": [
+      "flight_cancelled",
+      "hotel_full",
+      "attraction_closed",
+      "restaurant_closed",
+      "negative_irrelevant"
+    ],
+    "severity_grid": [1.0],
+    "validity_threshold": 0.7,
+    "frontier_low": 0.4,
+    "frontier_high": 0.6
+  },
+  "retrieval": {"max_skills": 2, "index_limit": 8},
+  "lifecycle": {
+    "promote_delta_threshold": 0.05,
+    "deprecate_delta_threshold": -0.05,
+    "min_support": 3,
+    "passive_notify_delta_threshold": 0.15,
+    "low_score_delta_threshold": 0.05,
+    "unavailable_usage_delta_repair_threshold": 0.01,
+    "unavailable_usage_delta_deprecate_threshold": 0.05,
+    "lifecycle_score_promote_threshold": 0.05,
+    "lifecycle_score_deprecate_threshold": -0.08
+  },
+  "acceptance_diagnostic": {
+    "low_score_weight": 0.4,
+    "unavailable_weight": 0.6,
+    "final_pass_weight": 0.2,
+    "min_lifecycle_score": 0.0,
+    "min_mean_delta": -0.05,
+    "max_low_score_delta": 0.05,
+    "max_unavailable_delta": 0.02,
+    "min_final_pass_delta": -0.05,
+    "max_success_to_failure_rate": 0.1
+  },
+  "quality_gate": {
+    "max_llm_error_rate": 0.0,
+    "min_parse_success_rate": 1.0,
+    "min_counterfactual_coverage": 0.75
+  },
+  "ontology_prompt_limit": 10,
+  "ontology_discovery_limit": 8,
+  "validation": {
+    "sample_count": 180,
+    "selected_budget": 2,
+    "expected_counterfactual_count": 0,
+    "frozen_intervention_path": "outputs/travelplanner/challenges/validation.jsonl"
+  },
+  "test": {
+    "sample_count": 1000,
+    "selected_budget": 2,
+    "expected_counterfactual_count": 0,
+    "frozen_intervention_path": "outputs/travelplanner/challenges/test.jsonl"
+  }
+}

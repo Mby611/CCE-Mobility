@@ -1,0 +1,15 @@
+[project]
+name = "cce-official-skillopt-runtime"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+  "azure-core>=1.30.0",
+  "azure-identity>=1.15.0",
+  "httpx>=0.27.0",
+  "numpy>=1.24.0",
+  "openai>=1.30.0",
+  "openpyxl>=3.1.0",
+  "pandas>=2.1,<3",
+  "pydantic>=2.7",
+  "pyyaml>=6.0",
+]

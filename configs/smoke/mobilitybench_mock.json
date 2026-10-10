@@ -1,0 +1,27 @@
+{
+  "experiment_name": "mobilitybench_public_mock_smoke",
+  "output_dir": "outputs/smoke",
+  "method": "no_evolution",
+  "iterations": 1,
+  "seed": 42,
+  "benchmark": {
+    "name": "mobilitybench",
+    "data_path": "tests/fixtures/mobilitybench_public_mock.csv",
+    "split": "mock",
+    "limit": 2
+  },
+  "agent": {"model": "placeholder-agent", "provider": "placeholder"},
+  "world_model": {"model": "placeholder-wm", "provider": "placeholder"},
+  "judge": {"model": "placeholder-judge", "provider": "placeholder"},
+  "intervention": {
+    "policy": "frontier",
+    "candidate_budget": 2,
+    "selected_budget": 1,
+    "dimensions": ["poi_closed", "road_blocked"],
+    "severity_grid": [1.0],
+    "validity_threshold": 0.7,
+    "frontier_low": 0.4,
+    "frontier_high": 0.6
+  },
+  "extra": {"save_skill_memory": false}
+}

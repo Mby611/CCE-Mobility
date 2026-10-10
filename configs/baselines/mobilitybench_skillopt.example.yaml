@@ -1,0 +1,67 @@
+model:
+  backend: qwen_chat
+  optimizer: your-agent-model
+  target: your-agent-model
+  optimizer_backend: qwen_chat
+  target_backend: qwen_chat
+  reasoning_effort: ""
+  rewrite_reasoning_effort: ""
+  rewrite_max_completion_tokens: 8192
+  qwen_chat_base_url: "https://your-endpoint.example/v1"
+  qwen_chat_api_key: ""
+  qwen_chat_temperature: 0.0
+  qwen_chat_timeout_seconds: 300
+  qwen_chat_max_tokens: 8192
+  qwen_chat_enable_thinking: false
+  optimizer_qwen_chat_temperature: 0.3
+  target_qwen_chat_temperature: 0.0
+
+train:
+  num_epochs: 4
+  train_size: 20
+  batch_size: 8
+  accumulation: 1
+  seed: 42
+
+gradient:
+  minibatch_size: 4
+  merge_batch_size: 4
+  analyst_workers: 1
+  max_analyst_rounds: 3
+  failure_only: false
+
+optimizer:
+  learning_rate: 4
+  min_learning_rate: 2
+  lr_scheduler: cosine
+  lr_control_mode: fixed
+  skill_update_mode: patch
+  use_slow_update: true
+  slow_update_samples: 12
+  slow_update_gate_with_selection: false
+  longitudinal_pair_policy: mixed
+  use_meta_skill: true
+  use_skill_aware_reflection: false
+
+evaluation:
+  use_gate: true
+  sel_env_num: 20
+  test_env_num: 0
+  eval_test: false
+
+env:
+  name: cce_mobilitybench
+  skill_init: "configs/baselines/mobilitybench_initial_skill.md"
+  split_mode: split_dir
+  split_seed: 42
+  split_dir: "runs/local_data/mb_skillopt_dataset"
+  out_root: "runs/local_data/mb_skillopt_run"
+  workers: 1
+  max_completion_tokens: 2048
+  target_call_delay_seconds: 0.5
+  judge_model: your-judge-model
+  judge_chat_url: "https://your-endpoint.example/v1/chat/completions"
+  judge_api_key_env: CCE_JUDGE_API_KEY
+  judge_call_delay_seconds: 0.5
+  judge_api_max_retries: 5
+  judge_api_retry_backoff_seconds: 10.0

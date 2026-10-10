@@ -1,0 +1,714 @@
+{
+  "schema_version": "cce-release-manifest-v1",
+  "scope": "cce-mobility-unified",
+  "source_manifests": [
+    "public_files.txt"
+  ],
+  "file_count": 176,
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "505fd647f4670dad2ff7a4199f0cb2c0547670f606d795da8ad059c8cea666e2"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "README.md",
+      "sha256": "884e1ad3154d2b84cd9f73023788be0aa187d4fbe6688d3ce4f16901f9961cdb"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "sha256": "b457ac9e76c728475ba7c044a628a842f07343f4f1027b9eba275dae876df025"
+    },
+    {
+      "path": "THIRD_PARTY.md",
+      "sha256": "3820d821941bef94a8d6a3fd8820f4bc06c0734687a7e796a5573794bb1adea9"
+    },
+    {
+      "path": "assets/README.md",
+      "sha256": "d379182566c0173a8b77c675dc887beda6e003ae6aa518e865c53299eac91356"
+    },
+    {
+      "path": "assets/method.png",
+      "sha256": "040bcad4995d60e588d6c21309911f309f66cca4bea8f1209238cc22461373e9"
+    },
+    {
+      "path": "assets/motivation.png",
+      "sha256": "0d0123d27c2021982693ad9e32eac26319dd398da3402b6757371161654f6e38"
+    },
+    {
+      "path": "assets/paper_tables_manifest.json",
+      "sha256": "de25eb8075d44c56cd10b2e59b786e4ebfc68bb17cd9f36b618c4c000240f4a7"
+    },
+    {
+      "path": "configs/ablations/training_budgets.json",
+      "sha256": "da9ffd24a94bf78d2dc53e5c321b8b347de443d387cc8ecffc3fd52d0f16c1e8"
+    },
+    {
+      "path": "configs/baselines/mobilitybench_initial_skill.md",
+      "sha256": "a07192f0c98742a1457594e1d6109c14909b89f9875e8e4f6dc55e9eac463236"
+    },
+    {
+      "path": "configs/baselines/mobilitybench_skillopt.example.yaml",
+      "sha256": "d4c86500b70064340c39abee2d3f0441b6a47c72c90fa4767a8d03ef1f7baa81"
+    },
+    {
+      "path": "configs/baselines/travelplanner_initial_skill.md",
+      "sha256": "c400dc4c456c82f8e6277bc568c38a2efc5d810ee98e2d21160e158931be2ed2"
+    },
+    {
+      "path": "configs/baselines/travelplanner_skillopt.example.yaml",
+      "sha256": "d629a96b343c11cba8dc9929d00dbafa784d1b86f973ede41575bc9360128c83"
+    },
+    {
+      "path": "configs/mobilitybench/coevolution.template.json",
+      "sha256": "e15f55b78fc2050c0680f0718b1ca4109b5e01d2aa30e0c82116af722b94496d"
+    },
+    {
+      "path": "configs/mobilitybench/mobilitybench_generate_frozen.example.json",
+      "sha256": "aba62194feb70b0339649f3781ca8a0a5e37e5029fde09dda6201918fcd320c7"
+    },
+    {
+      "path": "configs/mobilitybench/mobilitybench_official_posthoc.example.json",
+      "sha256": "680a1d8796b8a6194b9ed0038910ca9332f9dbe0fe5b3123600e2a4403238bdf"
+    },
+    {
+      "path": "configs/models/openai_compatible.example.json",
+      "sha256": "a0a5cbfe8b4d9fbea51ef7dc362848cb1c4f98853491df7c650ce7d81e5ade12"
+    },
+    {
+      "path": "configs/smoke/mobilitybench_mock.json",
+      "sha256": "8e0496c8b0561ee86c48e51e10b70f12214b0d0061eb4a383f4cef70e5289024"
+    },
+    {
+      "path": "configs/smoke/travelplanner_offline.json",
+      "sha256": "d8b30067a7fcb5c0b7393860edf5be2f1e36fdcc3c70e3d91d943e4a1191e642"
+    },
+    {
+      "path": "configs/travelplanner/travelplanner_memory_curation_ablation.template.json",
+      "sha256": "ee6dfac970cca395176aa23d99d07609c525a3c4fe458afbaed9f17de5f80309"
+    },
+    {
+      "path": "docs/baselines.md",
+      "sha256": "dcaa50782ca3f1d58629f38fb11eb620fbbc3579ee11482952848820fca7b209"
+    },
+    {
+      "path": "docs/development.md",
+      "sha256": "d4beb3f3fa27ef0359d8d8fa4114754b9906543b449ac8106d7b9e3e167849bb"
+    },
+    {
+      "path": "docs/getting-started.md",
+      "sha256": "05fe7092169212453b3f824bcb81a84796a63007769396df68a22a6d42cdf226"
+    },
+    {
+      "path": "docs/method.md",
+      "sha256": "268f0c5222a5585be1edae515824b2cc0fc6f739ee1af51e7f0b4d070465f228"
+    },
+    {
+      "path": "docs/metrics.md",
+      "sha256": "ce566427cfe69bf64f572398ae268a2a7677e058b963136197e417794384b1f4"
+    },
+    {
+      "path": "docs/protocol.md",
+      "sha256": "bdf9b6f18c0ce0f515a004c4f30865e4833144e87f88e77671a54991826b28e4"
+    },
+    {
+      "path": "docs/reproducibility/budgets.md",
+      "sha256": "13bad00ff235826920611ae7d2a167f5a4801f104c3f9b47a0b159e7e97594d6"
+    },
+    {
+      "path": "docs/reproducibility/mobilitybench.md",
+      "sha256": "e2629a8d594176bdc8d76f8d5f82d293cf9cbbcd64f1a9a9a14ff213cf8d598a"
+    },
+    {
+      "path": "docs/reproducibility/paid-smoke.md",
+      "sha256": "32cf508c12870b9a58f3b2487b538fa11cf919b50fac1a1426e8289ac3757785"
+    },
+    {
+      "path": "docs/reproducibility/travelplanner.md",
+      "sha256": "6b230594a6627ab35725027db28a77e09f86307dd8ebb0a603c544f08f07d745"
+    },
+    {
+      "path": "docs/reproducibility/upstream-versions.md",
+      "sha256": "746c033b1520ee98771ee8f99fcedc145f4637230c35c704f121a431c386b020"
+    },
+    {
+      "path": "docs/setup/providers.md",
+      "sha256": "452af566e9038669259ef2692f7560f70b8d514f23aec71a10a332ecd984f883"
+    },
+    {
+      "path": "examples/travelplanner_synthetic/validation.csv",
+      "sha256": "33f54961482d1195d150244ba84a10a87cbce8c8c6b331384d37067311c61701"
+    },
+    {
+      "path": "examples/travelplanner_synthetic/validation_ref_info.jsonl",
+      "sha256": "2d42bd3817e61472db418e6836cf3a8ebb4df553855d250e121e337c6439882a"
+    },
+    {
+      "path": "integrations/skillopt_runtime/pyproject.toml",
+      "sha256": "f504926a335da300f46d456caec2ee83e50cade3afc815ef92522a6edfcf8c02"
+    },
+    {
+      "path": "integrations/skillopt_runtime/uv.lock",
+      "sha256": "a19983d9a6949cca63f0a5654f6c58b192a17d3c54ffc66f20df0d79bf0e56a9"
+    },
+    {
+      "path": "patches/mobilitybench/sitecustomize.py",
+      "sha256": "1e15a558c60b7deb73b5722a999a21ca826ca5380b57f6c215e156aa9e84422b"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "5d638ae5fe8cd3afd0a2c50fe7665a4ebc84965decad9c9bd9219626006caacf"
+    },
+    {
+      "path": "scripts/run_mobilitybench_official_smoke.sh",
+      "sha256": "f761cc902c0a1141eb30d6cdd2cb088314ec7e8abd52a169d98ef6bf90f3dabd"
+    },
+    {
+      "path": "src/cce_mobility/__init__.py",
+      "sha256": "64ab1e75ce44a44a51bb4b1870f2dd29480c6c2da62ae72ea29a0c5fe205a63e"
+    },
+    {
+      "path": "src/cce_mobility/analysis/__init__.py",
+      "sha256": "34a0acf2047e93cfe953e377bced3c6df6b8bc292c714afea5a78958d6358814"
+    },
+    {
+      "path": "src/cce_mobility/analysis/badcases.py",
+      "sha256": "eb8457fe3767f31331b1044b0d478fc1aa407f685e7226b7442458838056c4b9"
+    },
+    {
+      "path": "src/cce_mobility/analysis/tables.py",
+      "sha256": "29110f46de330110442794b38e43f1bcc89c58fa3626ffd9c371cd7c65272ccc"
+    },
+    {
+      "path": "src/cce_mobility/benchmarks/__init__.py",
+      "sha256": "fdc30dbd1a83e6498a1e484c7c30d243ba14e49a4c9d0754a5a326e9e2349e89"
+    },
+    {
+      "path": "src/cce_mobility/benchmarks/factory.py",
+      "sha256": "7d8c5016206b9c8f3dde3ab619f0bc52eda1919eff8f03f9726d1ae246c2381a"
+    },
+    {
+      "path": "src/cce_mobility/benchmarks/observable.py",
+      "sha256": "217b7e80c5b9b2c34f02180493955349ff923f9be6a5cdbc36c8db6a10423b52"
+    },
+    {
+      "path": "src/cce_mobility/benchmarks/placeholder.py",
+      "sha256": "5c7d861778f96447a7a08bfb98e08ef389c775ece6cb9fa074849ad838e19469"
+    },
+    {
+      "path": "src/cce_mobility/benchmarks/travelplanner.py",
+      "sha256": "03efba9471395d399d865ebbfd81784145fe870c35bc3e4bd29e809cc688b2d3"
+    },
+    {
+      "path": "src/cce_mobility/benchmarks/travelplanner_eval.py",
+      "sha256": "801e4ce99e4ca63336a8e82c3e3adef38d6cd82e716702bcf002c55432ef5c98"
+    },
+    {
+      "path": "src/cce_mobility/benchmarks/travelplanner_rule_wm.py",
+      "sha256": "46563ef652c7ebd0a7268a0044c34f6779110019789ab52ef8848fd66867d041"
+    },
+    {
+      "path": "src/cce_mobility/cli.py",
+      "sha256": "5f0213f0aeeb9a56f4142462bf5d638b3d881ab7f0b53afd95164fa1de51d32c"
+    },
+    {
+      "path": "src/cce_mobility/core/__init__.py",
+      "sha256": "343acaba207872a84749fab517c28645b3be584c740a84f8823317d340f41b60"
+    },
+    {
+      "path": "src/cce_mobility/core/capabilities.py",
+      "sha256": "bf05a4ae2653f5be4d9aeb9e709b634736b63eca3829342304bdd2531a9ee1a1"
+    },
+    {
+      "path": "src/cce_mobility/core/config.py",
+      "sha256": "cc758011bfa7c339396b905e363746c143617ea9f644a44d1c974fcb8483697d"
+    },
+    {
+      "path": "src/cce_mobility/core/env.py",
+      "sha256": "d9e0566fa8f6cfc201a00c36989ab95e8e070cf02ad394a3970136f03819f9b1"
+    },
+    {
+      "path": "src/cce_mobility/core/llm.py",
+      "sha256": "c5426a76deef4d8883a1518ed9ae4067aa67570b35483821e6616ff1bcad068d"
+    },
+    {
+      "path": "src/cce_mobility/core/metrics.py",
+      "sha256": "977e873d62967b4c346c8d31d582bba0b1c2d49b22a98d144c98df24030cad27"
+    },
+    {
+      "path": "src/cce_mobility/core/protocols.py",
+      "sha256": "7766bf3161459e0caebc6712ad45b6715ada30c6f256f09bb751f554f18f12bf"
+    },
+    {
+      "path": "src/cce_mobility/core/recovery_context.py",
+      "sha256": "4e4e2030ea8d883769e42588590cfbc536c5878c89b3f3e6fb684f6c102d7e9b"
+    },
+    {
+      "path": "src/cce_mobility/core/schema.py",
+      "sha256": "bae84725d06dc41b0febd51d95b77cee758e2b322fdd94e06e0aa55d75be51ed"
+    },
+    {
+      "path": "src/cce_mobility/integrations/__init__.py",
+      "sha256": "eac6ff7c1f0b1385bb52c9ee5aec6a7f9f65cbc8041d8e5833f88f541eacb887"
+    },
+    {
+      "path": "src/cce_mobility/integrations/mobilitybench_continuation.py",
+      "sha256": "7ca19076760b24bacecd243cbed428cccbab60aa611fa48a85e8647a94b61c4b"
+    },
+    {
+      "path": "src/cce_mobility/integrations/mobilitybench_official_audit.py",
+      "sha256": "226b5174458fa658808d4394aca2c7dc8dd9371ff0002b5e114608a558d59951"
+    },
+    {
+      "path": "src/cce_mobility/integrations/skillopt_mobilitybench.py",
+      "sha256": "c0973d0ef02f5e24885b2a644d28f9816ff05a569e11e7eb26eb2f4659244fcc"
+    },
+    {
+      "path": "src/cce_mobility/integrations/skillopt_qwen_compat.py",
+      "sha256": "cbad2cefa934013f27354bb1d3b7ee70c69fa0124f0ceb60ac397dc4427851bc"
+    },
+    {
+      "path": "src/cce_mobility/integrations/skillopt_travelplanner.py",
+      "sha256": "bc12751a0fc5fb8df05240849798b5ff6e98bf90fce2640f76fbb0869dd40631"
+    },
+    {
+      "path": "src/cce_mobility/interventions/__init__.py",
+      "sha256": "66782604a062c2b7a6ed89301530149b650b73d2ef4c29390106d41aaa7a8e61"
+    },
+    {
+      "path": "src/cce_mobility/interventions/analyzer.py",
+      "sha256": "f69427911a4f7654cfabb536d8bd8799e212c7310fcb09c4bdd5a967df739251"
+    },
+    {
+      "path": "src/cce_mobility/interventions/frontier.py",
+      "sha256": "2fc0670a7b1963787218aa2a925a469574ce4ab74ae5675673a989ea96e25400"
+    },
+    {
+      "path": "src/cce_mobility/interventions/generator.py",
+      "sha256": "013fc0632418a71f93365b9143d00bdfe91dd0d531e8c4c647f1570da2beb886"
+    },
+    {
+      "path": "src/cce_mobility/interventions/library.py",
+      "sha256": "4d73e9f512389f6649f0dd9051ad2a072aeebd4f6d05e4226164cab5dfee4f31"
+    },
+    {
+      "path": "src/cce_mobility/interventions/ontology.py",
+      "sha256": "5fff1ed5edac72834d5129b6d384d793465cd019f694619cc7c0fde239c912d4"
+    },
+    {
+      "path": "src/cce_mobility/interventions/predictor.py",
+      "sha256": "db7194e459de4e636f0640e9eefba293877dee721cb13f629d5dffc6e59a2492"
+    },
+    {
+      "path": "src/cce_mobility/interventions/spec_builder.py",
+      "sha256": "35858d413e763c9d29d979a3b2f3247075f69fcadc5761626624f4e4de37e329"
+    },
+    {
+      "path": "src/cce_mobility/interventions/travelplanner_spec.py",
+      "sha256": "26b485103f87b57a8e23db8116a0f2e9570d1d1ec2d3cf12f2e25808f74046ba"
+    },
+    {
+      "path": "src/cce_mobility/interventions/validator.py",
+      "sha256": "5a424ec160562759731ad9f4ec2acd9f6fb641cd6dd67cb49dedfd5e41a65c23"
+    },
+    {
+      "path": "src/cce_mobility/judges/__init__.py",
+      "sha256": "1c6b672f188b654db387819c05c3dd5f0596a62b0f8ebafa62d81a7ce602b74a"
+    },
+    {
+      "path": "src/cce_mobility/judges/recovery.py",
+      "sha256": "960a12342d851a819cce11b77567d303894f5d84816e5cdaf4cfc9888637c518"
+    },
+    {
+      "path": "src/cce_mobility/judges/spec_llm.py",
+      "sha256": "e232761040aaa3d72a1c2d2a4fd5300211df8b0d57df15967db02f37dfb32c1a"
+    },
+    {
+      "path": "src/cce_mobility/local_secrets.example.py",
+      "sha256": "0a75a1c83a6073bfeb0527f2487d38dfc6dbb1a1dcb8c97a3c6a78e2aa0beec5"
+    },
+    {
+      "path": "src/cce_mobility/methods/__init__.py",
+      "sha256": "13efb296e80637ae9cd84505b771ccb53ded089d3991365b7b2dcf944d85afac"
+    },
+    {
+      "path": "src/cce_mobility/methods/baselines.py",
+      "sha256": "c4b0864a3ebdccd26afcbb68b0b6924c0cdab3c7ae0d1f557a7c12a571ffd789"
+    },
+    {
+      "path": "src/cce_mobility/methods/factory.py",
+      "sha256": "590ad5b18cf44376d5d64d68839b12caeeeafa4fd90fafc2210877b9afe2fde0"
+    },
+    {
+      "path": "src/cce_mobility/methods/formal_coevolution.py",
+      "sha256": "504a7ba207520b581b599379341fbc9d2b99273bd4ff030796645a2da5c23cc7"
+    },
+    {
+      "path": "src/cce_mobility/methods/no_evolution.py",
+      "sha256": "8df5782047065ab3ef3a853514beb53ec9b24db2a8a5c771acafec2dd4ffbd3d"
+    },
+    {
+      "path": "src/cce_mobility/methods/skill_evolution.py",
+      "sha256": "56e7439a87c739e4700ece9b4b80c9f4fed1828cd2182a51d6b9037edb2d3576"
+    },
+    {
+      "path": "src/cce_mobility/runners/__init__.py",
+      "sha256": "8f6b1f4433e03a5b5cdf436a97244bad4cc389425d08332da18cf47b6a098c2d"
+    },
+    {
+      "path": "src/cce_mobility/runners/evaluation.py",
+      "sha256": "c1eb021a065bc096458f6d8c541e15f323a1aa64d5a0fef6d2eae5f7d17b97ed"
+    },
+    {
+      "path": "src/cce_mobility/runners/matrix.py",
+      "sha256": "e038f2a4210e1e54cafea6251c2e73c7613943b39e25cd61ea2ab5383d197125"
+    },
+    {
+      "path": "src/cce_mobility/skills/__init__.py",
+      "sha256": "3e0753a3a3f8ecc3b5d7ad10caa5a9000399af5bfae505c9cd0db7e5d9458cbf"
+    },
+    {
+      "path": "src/cce_mobility/skills/lifecycle.py",
+      "sha256": "df8d2b5396f20d9e1be4cd02c1dc875374ef5dd6af2258468e7aa8468c7c3ca8"
+    },
+    {
+      "path": "src/cce_mobility/skills/miner.py",
+      "sha256": "d1c05ca097e0a539f3d604aac323e1082829cbd2f050a1e0e07a2ccbe40284b4"
+    },
+    {
+      "path": "src/cce_mobility/skills/prompting.py",
+      "sha256": "fada6f6f54f4c3a9ebdc5cb13e089a66fa0be6a30ce6c55036d6177aee9d5051"
+    },
+    {
+      "path": "src/cce_mobility/skills/registry.py",
+      "sha256": "4ee1069c6badbbc416c0884b1e8db6a58231d80f3bc7a1ff103c41dda780cfc9"
+    },
+    {
+      "path": "src/cce_mobility/skills/retrieval.py",
+      "sha256": "c0815bab966a8c8d3fc1b7ab7fb3e3e7f45b20603c6a6c0449b0fb0b707336d2"
+    },
+    {
+      "path": "src/cce_mobility/skills/schema.py",
+      "sha256": "6aaf966c92317683ac79d2947009ab5dd286c565fdff8e6f73fcc928cb4f58c9"
+    },
+    {
+      "path": "src/cce_mobility/workflows/__init__.py",
+      "sha256": "60cf60b4dddd777aa266980520486e3a499742b5e9b261486b072e2ee86323cd"
+    },
+    {
+      "path": "src/cce_mobility/workflows/baselines/__init__.py",
+      "sha256": "fc3cd231ea538b6e609ea0d812d70d76b68c483d1befb91e591d697931e70283"
+    },
+    {
+      "path": "src/cce_mobility/workflows/baselines/materialize_official_skillopt_dataset.py",
+      "sha256": "352063664a49d0b9f863dc8e3768546f8d66b60540012b32ab7a80aa8ccb4017"
+    },
+    {
+      "path": "src/cce_mobility/workflows/baselines/materialize_official_skillopt_mobilitybench_dataset.py",
+      "sha256": "7efbf9e000b09b5234486ea4f36610256af86f828484b99acbb2e77261ac29d3"
+    },
+    {
+      "path": "src/cce_mobility/workflows/baselines/run_official_skillopt.py",
+      "sha256": "fd885671323eb0629ffaa63e00816d1ad2bbaf89fcf4173eb52490bcef70e45a"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/__init__.py",
+      "sha256": "c54bb15a31f67901c19f9f7e460c2f92010afa29894c236d29e446924ceabee3"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/compare_mobilitybench_official_case_metrics.py",
+      "sha256": "de9d75b6248822fc9992d3349d7aadb32262e18e1d473107c05e2c1d8aabc8f8"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/compare_mobilitybench_official_metrics.py",
+      "sha256": "c2f3391714c078044c111986d6b273fdaf61f6f36019530f67e334febb640db5"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/convert_mobilitybench_official_to_cce.py",
+      "sha256": "334872e09441eae9cffdc7c9ad8cde493b8a132a77a136e9001834306f2d4f3d"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/download_mobilitybench.py",
+      "sha256": "65566b1cc3f73d68b861099f21807468a42df4ad7ed1e444907c5cf82eeee903"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/generate_mobilitybench_official_frozen_intervention_set.py",
+      "sha256": "45a041dcb6851f0d355d42d1a11d9520e4f216af1edd36c192226046d96e8c04"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/prepare_mobilitybench_continuation_protocol.py",
+      "sha256": "497aadd73ffaa2cfc613641ccbcfa5bdbfe1805a9440bfec8220eb72d7b9e1a4"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/prepare_mobilitybench_official_smoke.py",
+      "sha256": "5f0fbec09c5d1e0c933f05395c1aad40549e623263784cde5d76aedb69678086"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/reconcile_mobilitybench_official_run.py",
+      "sha256": "64063c19d8608b9d34621239b6ca558931c29a6e6655f5e000b0b16e05098901"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/run_mobilitybench_formal_coevolution_curve.py",
+      "sha256": "ccf40317c495844696075a0fc2ec119f4da50c7e29b7c5bba03f7fe77e80c85c"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/run_mobilitybench_formal_coevolution_train.py",
+      "sha256": "c46a3ff74fe943af875fe32ef14a21e6c9cf0d749d5c93a011cbeaa91b137edf"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/run_mobilitybench_official_continuation.py",
+      "sha256": "59a9f04b17bdb6205ff1d5a7ab7471b42cef70250d8b07ab0756b4cc2cfe2933"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/run_mobilitybench_official_eval.py",
+      "sha256": "6af945ba59055e672401c8b8a48546d62ce2e4cc74d93ff4558606af844e57ca"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/run_mobilitybench_official_posthoc.py",
+      "sha256": "3a22ddde4731cc885abfb9f58690af65d8efd75540aa925d3ec79d4ef95108d5"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/run_mobilitybench_official_posthoc_matrix.py",
+      "sha256": "dfaf49de1a17412a87064456ff78eb52b93ed2d359f582fd9958ebc1ae640090"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/run_mobilitybench_official_prequential.py",
+      "sha256": "5bfa593b0e8968f3d934990ff3be57f6f8dafe063d142139e080bf54db95d7d0"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/summarize_mobilitybench_official_metrics.py",
+      "sha256": "d40df0a1fa478e115208b2f4bb176bbc0996a7bdbb65b971345636cd49c5c0cb"
+    },
+    {
+      "path": "src/cce_mobility/workflows/mobilitybench/summarize_mobilitybench_official_run.py",
+      "sha256": "96c334a2dcb39f7a4a2b50ace19cb65c5c6dbed022ad9273f9f8f390746b740e"
+    },
+    {
+      "path": "src/cce_mobility/workflows/public/__init__.py",
+      "sha256": "418fd524425ee0ec3cc483e7dcba65706ac27a2c0d4330ee0b84e2e18438fa74"
+    },
+    {
+      "path": "src/cce_mobility/workflows/public/artifacts.py",
+      "sha256": "61624d650284a64696e1597ab506fe46eb291d9559740d717a1a88c63c841d78"
+    },
+    {
+      "path": "src/cce_mobility/workflows/public/baselines.py",
+      "sha256": "35c28fef037ec0667a5b6cd8f07d3a069e7eb7bca60915c05913d03e7d4159e2"
+    },
+    {
+      "path": "src/cce_mobility/workflows/public/configuration.py",
+      "sha256": "a10ed59b522c0b666756bc00cc7e421d039e1847b18a3f1abe1f56e200d138e5"
+    },
+    {
+      "path": "src/cce_mobility/workflows/public/data.py",
+      "sha256": "b8be0de1eaeccd5af03d30d8eab9a8164231afe29b55db3a6aa4c375ee4c973e"
+    },
+    {
+      "path": "src/cce_mobility/workflows/public/pipeline.py",
+      "sha256": "44df96cd1d1d8ee6dae828e7cd06bc5c9e48e6bcf66f6354812a4f3747902773"
+    },
+    {
+      "path": "src/cce_mobility/workflows/public/travelplanner_official.py",
+      "sha256": "37f2185dabdb65566e899296f100dc890b88d3a164b8da51a309c02f994ae8c6"
+    },
+    {
+      "path": "src/cce_mobility/workflows/release/__init__.py",
+      "sha256": "f17bcf79091ea0b2830f7e2d96b8701c297f03aaa271ab2fecb9c7063f886275"
+    },
+    {
+      "path": "src/cce_mobility/workflows/release/build_public_candidate.py",
+      "sha256": "e773d4b16499e41a18a708f3ae9cfae1cae6a6d9df1a19abb8cbe24d60a5905f"
+    },
+    {
+      "path": "src/cce_mobility/workflows/release/security_audit.py",
+      "sha256": "fc2ab4b84fefb033c306636bdd8f74fadc3e81f7ab23fe4820354593e155283a"
+    },
+    {
+      "path": "src/cce_mobility/workflows/shared/__init__.py",
+      "sha256": "8e0aa535f04356440c21cde76af7a1dedaae99e275d468bddafa6c1f1cc208f2"
+    },
+    {
+      "path": "src/cce_mobility/workflows/shared/analyze_paired_ablation.py",
+      "sha256": "1492d80b3e7bdff83bf0363c843c383f7e1218634067c39e9948f21e34b2a88a"
+    },
+    {
+      "path": "src/cce_mobility/workflows/shared/build_posthoc_report_matrix.py",
+      "sha256": "321246f0491f71917d380b2819d625255d4283a5ff00632b815c87a38aadc7be"
+    },
+    {
+      "path": "src/cce_mobility/workflows/shared/export_agent_skill_prompt.py",
+      "sha256": "d5b76894b3913ad8e240ec4452f8318d27bba65667816fbae321d14576ea1a89"
+    },
+    {
+      "path": "src/cce_mobility/workflows/shared/run_matrix.py",
+      "sha256": "1abb50119fe906a1724794b8c495430ec8125ef0aa57fd7679a0f5a2d75ddf69"
+    },
+    {
+      "path": "src/cce_mobility/workflows/shared/run_smoke.py",
+      "sha256": "f17ed06857a8dc19ae5a79d922a0d47d6f9ddb7554365e5e2bae45ff1367864f"
+    },
+    {
+      "path": "src/cce_mobility/workflows/travelplanner/__init__.py",
+      "sha256": "963a415c8d0a59d91b4b5a786000b2af42e3e1ae6d4a239da56df585d1320ccd"
+    },
+    {
+      "path": "src/cce_mobility/workflows/travelplanner/analyze_travelplanner_paired_significance.py",
+      "sha256": "f41a272934fcce1af839f0a4f9a10bc28a8e5ec292b23c27656d5534bd8ddd88"
+    },
+    {
+      "path": "src/cce_mobility/workflows/travelplanner/export_travelplanner_official_eval.py",
+      "sha256": "3a6fc5210fcbf081fa2f9ecde5a9c6e8d61189bd7307296af169d4d298df5f7a"
+    },
+    {
+      "path": "src/cce_mobility/workflows/travelplanner/generate_intervention_set.py",
+      "sha256": "d60b9897292f64871f141947d827b35eff3d0be079b6603e55d3a21bf73c2209"
+    },
+    {
+      "path": "src/cce_mobility/workflows/travelplanner/reparse_travelplanner_records.py",
+      "sha256": "bbaa770c49b51d692f259b45aaa976698404f8298128109efd5bbb55c4d02ecf"
+    },
+    {
+      "path": "src/cce_mobility/workflows/travelplanner/resume_travelplanner_memory_curation_ablation.py",
+      "sha256": "225a815c2b64030bcdb1d8f0eca5e4ffbf06526d4f556e248b3284dc6a7b447a"
+    },
+    {
+      "path": "src/cce_mobility/workflows/travelplanner/run_travelplanner_memory_curation_ablation.py",
+      "sha256": "fc0615f12bdbe037d717b2879fbb09093f71cdf0641d316c7f0d823d2336338b"
+    },
+    {
+      "path": "src/cce_mobility/workflows/travelplanner/run_travelplanner_official_eval_batch.py",
+      "sha256": "279889ef9cc678d83ee50ca970ce92faa720550e2d0ab8fbe5377b7003a14fb0"
+    },
+    {
+      "path": "tests/fixtures/mobilitybench_public_mock.csv",
+      "sha256": "05d0c0558c7bbb6d65c47e6451d8dea21fb3a4fa8f50d3b45bf03c7962c5f3a2"
+    },
+    {
+      "path": "tests/integration/test_compare_mobilitybench_official_case_metrics.py",
+      "sha256": "2e514c0a7fa16191ce14adf8c91d3f3edda99d367562787fc7c8130a9c572817"
+    },
+    {
+      "path": "tests/integration/test_compare_mobilitybench_official_metrics.py",
+      "sha256": "d30b981198194416af55e6172334239874d6cb5c8c7d6583d6778e96fdeab59d"
+    },
+    {
+      "path": "tests/integration/test_convert_mobilitybench_official.py",
+      "sha256": "95448fca39d6657c37ba4dfd5789d9096b39baacede7941f05bc6277f4ab1eba"
+    },
+    {
+      "path": "tests/integration/test_download_mobilitybench.py",
+      "sha256": "e2d570facdff0ee89023be32b4154cbc13bf5a29923c54d9815161afa8d1dec8"
+    },
+    {
+      "path": "tests/integration/test_materialize_official_skillopt_mobilitybench_dataset.py",
+      "sha256": "92827db1603e07c2871604e76d240784bea4a946018726ce2e33a56306d80d5a"
+    },
+    {
+      "path": "tests/integration/test_mobilitybench_formal_coevolution.py",
+      "sha256": "99fe2c8548b644de3a9fc10a7994d5b0b04f771ec6b855b2b1383404b9b55ec9"
+    },
+    {
+      "path": "tests/integration/test_mobilitybench_formal_curve.py",
+      "sha256": "a78e4a910a45f4bff6a28f2caf44ab7a3b442a0d6cbe6ef3e0533f6bc7c42cb4"
+    },
+    {
+      "path": "tests/integration/test_mobilitybench_official_audit.py",
+      "sha256": "a08005dae24d5f62c274532245862eac408b34a2ed9fd9f998f4a14c274d50b5"
+    },
+    {
+      "path": "tests/integration/test_mobilitybench_official_posthoc_matrix.py",
+      "sha256": "ce43719e96765202820722cffd8ade558217e3cfb4ab4094cca9f58a9ee5ba70"
+    },
+    {
+      "path": "tests/integration/test_mobilitybench_official_prequential.py",
+      "sha256": "6b2f1370669b17095a85b1fe606dc61c20d9af24ef2fd5d87230a8b2405cf3af"
+    },
+    {
+      "path": "tests/integration/test_mobilitybench_official_smoke.py",
+      "sha256": "df935d87087d03b71c43a53ace3e083f30b4e84efaf60f061e0c9e9ed9fd78d6"
+    },
+    {
+      "path": "tests/integration/test_official_skillopt_artifact.py",
+      "sha256": "b52fa917138804ddad21d2801758e05d11fbd8474ee711f2be7cf7df12296c09"
+    },
+    {
+      "path": "tests/integration/test_public_release_candidate.py",
+      "sha256": "40f631b1a667da43532439b2a1cc17d495b0dc52d01289db438dfdc5a64a0c9f"
+    },
+    {
+      "path": "tests/integration/test_publication_security.py",
+      "sha256": "00ef0e8c0e485cddaf14de90d57843b9b9147d429fad25bce262334d7971d001"
+    },
+    {
+      "path": "tests/integration/test_public_workflow.py",
+      "sha256": "5e184abf4ba16281f65bbc69ccedcfa355625e5cbcc5740576c894c0949154bd"
+    },
+    {
+      "path": "tests/smoke/test_offline_entrypoints.py",
+      "sha256": "9b3512edeb2f9b58a3cd0d72c5558892647593698d553a13e54ecd5210f7b8f9"
+    },
+    {
+      "path": "tests/smoke/test_packaged_workflows.py",
+      "sha256": "5337789b16d7bd0c421f8702f08fdc3fb863116e66eb1daada3c24217877d3e8"
+    },
+    {
+      "path": "tests/unit/test_agent_owned_retrieval.py",
+      "sha256": "8fee75f6085cc09c18215804c00f84c42ddc841740082d5eb346a62f619259a2"
+    },
+    {
+      "path": "tests/unit/test_intervention_ontology.py",
+      "sha256": "f4855d5b0d6ac0d1e17f7230126257841556cf8f521094ea4a8557acda92ae4f"
+    },
+    {
+      "path": "tests/unit/test_lifecycle.py",
+      "sha256": "6f3cc3176095fd5e8618c073974e508f2deeb8b3b17903f1564779fd28c3bc06"
+    },
+    {
+      "path": "tests/unit/test_public_model_protocols.py",
+      "sha256": "35720fd5618bf36fb698b87d4491b3c98ee7fe0ee052785e4db5af87e3b64e74"
+    },
+    {
+      "path": "tests/unit/test_skills.py",
+      "sha256": "d0ee4b9cd19a6becbb14832386050f0f59160f28f05c1f2afc86cd6e3a0eb19c"
+    },
+    {
+      "path": "tests/unit/test_travelplanner_eval.py",
+      "sha256": "c7585ae639ace69500176a3c1af79915ec11d20aaea65576a4598b8bd611d49f"
+    },
+    {
+      "path": "tests/unit/test_travelplanner_rule_wm.py",
+      "sha256": "685d9137bde621cbd4484bb93aca2d6cf017fb2d3def1ebca614c0c0e5bf26bc"
+    },
+    {
+      "path": "tests/unit/test_travelplanner_spec.py",
+      "sha256": "2754beabbbf19610273e364c21a2ac5314f20a97b2198aa889e15e36185c4e70"
+    },
+    {
+      "path": "tools/build_public_candidate.py",
+      "sha256": "ba20724d8db9195037ae5657d7b5d5a45af19e8034c2b3ab5f9c66c34c04dc4c"
+    },
+    {
+      "path": "tools/audit_publication.py",
+      "sha256": "c242c1a647c3db74b8d9294dcd9a551988e9cbebc990e71dc7c3889ffde62732"
+    },
+    {
+      "path": "tools/check_repository.py",
+      "sha256": "cebe98d39a9f9bdc9ddf18f0661a459f3e70ffcef4efe3a5f346d0fc6ca6aa2f"
+    },
+    {
+      "path": "tools/public_files.txt",
+      "sha256": "32fe2b3ddb7ede5422e00d8d4eebd7f3f3b21de5621d535bb743c50f321d6606"
+    },
+    {
+      "path": "uv.lock",
+      "sha256": "2e7f13a02ce922a83e229dcc6b3c7ee9b7231e682bb4c8aea8ee0ad6fb50092c"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "dfb47156a1f095b51d12426d79f532b286234d3a6b9ce79c29aa29ed707fe8c3"
+    }
+  ]
+}

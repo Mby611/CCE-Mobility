@@ -1,0 +1,5 @@
+{
+  "agent": {"model": "your-agent-model", "provider": "openai", "base_url": "https://your-endpoint.example/v1", "api_key_env": "CCE_MODEL_API_KEY", "temperature": 0.0, "max_tokens": 8192, "extra": {"api_timeout_seconds": 180, "api_max_retries": 3}},
+  "world_model": {"model": "your-agent-model", "provider": "openai", "base_url": "https://your-endpoint.example/v1", "api_key_env": "CCE_MODEL_API_KEY", "temperature": 0.3, "max_tokens": 8192, "extra": {"api_timeout_seconds": 180, "api_max_retries": 3}},
+  "judge": {"model": "your-judge-model", "provider": "openai", "base_url": "https://your-endpoint.example/v1", "api_key_env": "CCE_JUDGE_API_KEY", "temperature": 0.0, "max_tokens": 2048, "extra": {"api_timeout_seconds": 180, "api_max_retries": 3}}
+}

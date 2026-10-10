@@ -1,0 +1,23 @@
+{
+  "experiment_name": "tp_public_offline_smoke",
+  "output_dir": "outputs/smoke",
+  "method": "no_evolution",
+  "iterations": 1,
+  "seed": 42,
+  "benchmark": {
+    "name": "travelplanner",
+    "data_path": "examples/travelplanner_synthetic/validation_ref_info.jsonl",
+    "split": "validation",
+    "limit": 1
+  },
+  "agent": {"model": "placeholder-agent", "provider": "placeholder"},
+  "world_model": {"model": "placeholder-world", "provider": "placeholder"},
+  "judge": {"model": "heuristic", "provider": "local"},
+  "intervention": {
+    "policy": "fixed",
+    "candidate_budget": 2,
+    "selected_budget": 1,
+    "dimensions": ["flight_cancelled", "negative_irrelevant"],
+    "severity_grid": [1.0]
+  }
+}

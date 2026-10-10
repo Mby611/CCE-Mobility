@@ -1,0 +1,53 @@
+{
+  "experiment_name": "mb_public_no_evolution_smoke",
+  "output_dir": "runs",
+  "method": "official_posthoc_no_evolution",
+  "iterations": 1,
+  "seed": 42,
+  "benchmark": {
+    "name": "mobilitybench",
+    "data_path": "runs/local_data/mb_smoke/cce_factual_records.jsonl",
+    "split": "local_smoke",
+    "limit": 2
+  },
+  "agent": {
+    "model": "your-agent-model",
+    "provider": "openai",
+    "chat_url": "https://your-endpoint.example/v1/chat/completions",
+    "api_key_env": "CCE_MODEL_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 2048
+  },
+  "world_model": {
+    "model": "your-agent-model",
+    "provider": "openai",
+    "chat_url": "https://your-endpoint.example/v1/chat/completions",
+    "api_key_env": "CCE_MODEL_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 2048
+  },
+  "judge": {
+    "model": "your-judge-model",
+    "provider": "openai",
+    "chat_url": "https://your-endpoint.example/v1/chat/completions",
+    "api_key_env": "CCE_JUDGE_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 4096
+  },
+  "intervention": {
+    "policy": "frozen",
+    "candidate_budget": 1,
+    "selected_budget": 1,
+    "dimensions": [],
+    "severity_grid": [1.0],
+    "validity_threshold": 0.7,
+    "frontier_low": 0.4,
+    "frontier_high": 0.6
+  },
+  "extra": {
+    "freeze_method": true,
+    "save_skill_memory": false,
+    "agent_owned_retrieval": false,
+    "frozen_intervention_path": "runs/local_data/mb_smoke/frozen_interventions.jsonl"
+  }
+}
