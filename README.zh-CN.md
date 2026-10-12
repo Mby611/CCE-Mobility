@@ -147,7 +147,7 @@ See [metric definitions](docs/metrics.md) and [evaluation protocol](docs/protoco
 
 ## Baselines
 
-[SkillOpt](https://github.com/microsoft/SkillOpt) 使用上游 trainer；[Reflexion](https://github.com/noahshinn/reflexion) 和 [Voyager](https://github.com/MineDojo/Voyager) 是任务适配的恢复实现，不是原仓库直接运行。步骤见[基线指南](docs/baselines.md)。
+[SkillOpt](https://github.com/microsoft/SkillOpt) 使用上游 trainer；本仓库将 [Reflexion](https://github.com/noahshinn/reflexion) 和 [Voyager](https://github.com/MineDojo/Voyager) 适配到出行规划与恢复任务，保留在线记忆更新，不属于原始上游环境的复现。步骤见[基线指南](docs/baselines.md)。
 
 消融通过 `--variant agent-only` 或 `--variant without-memory-curation` 配置。同题最终复评和 F→F 筛选在去掉整理时仍然保留。
 

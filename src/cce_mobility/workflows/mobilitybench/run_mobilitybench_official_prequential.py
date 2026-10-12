@@ -50,13 +50,13 @@ def main() -> int:
     parser = argparse.ArgumentParser(
         description=(
             "Run official MobilityBench one case at a time while updating a "
-            "Reflexion/Voyager-style memory after each scored case."
+            "task-adapted Reflexion or Voyager memory after each scored case."
         )
     )
     parser.add_argument(
         "--method",
         required=True,
-        choices=["reflexion_like", "voyager_like"],
+        choices=["reflexion", "voyager"],
         help="Online/prequential method to update after each scored case.",
     )
     parser.add_argument("--dataset", required=True, help="Official MobilityBench CSV.")

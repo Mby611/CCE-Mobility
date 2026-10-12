@@ -6,6 +6,8 @@ import json
 import sys
 from pathlib import Path
 
+import pytest
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 SCRIPT_PATH = (
@@ -60,10 +62,12 @@ def test_official_env_injects_prompt_and_paths(tmp_path: Path) -> None:
     assert env["CCE_MOBILITYBENCH_SKILL_PROMPT_ROLES"] == "worker,reporter"
 
 
+@pytest.mark.parametrize("method", ["reflexion", "voyager"])
 def test_dry_run_validates_prequential_inputs(
     tmp_path: Path,
     monkeypatch,
     capsys,
+    method: str,
 ) -> None:
     dataset = tmp_path / "official.csv"
     with dataset.open("w", encoding="utf-8", newline="") as f:
@@ -108,7 +112,7 @@ def test_dry_run_validates_prequential_inputs(
         [
             "run_mobilitybench_official_prequential.py",
             "--method",
-            "reflexion_like",
+            method,
             "--dataset",
             str(dataset),
             "--config",
@@ -128,7 +132,7 @@ def test_dry_run_validates_prequential_inputs(
     assert run_mobilitybench_official_prequential.main() == 0
     payload = json.loads(capsys.readouterr().out)
 
-    assert payload["method"] == "reflexion_like"
+    assert payload["method"] == method
     assert payload["case_count"] == 1
     assert payload["prequential_update_rule"] == "score case t, then update memory for case t+1"
 

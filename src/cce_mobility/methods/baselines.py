@@ -12,10 +12,10 @@ from cce_mobility.skills.prompting import (
 from cce_mobility.skills.retrieval import sanitize_agent_visible_text
 
 
-class ReflexionLikeMethod:
-    """Agent-only reflection memory baseline."""
+class ReflexionMethod:
+    """Task-adapted Reflexion baseline with agent-only reflection memory."""
 
-    name = "reflexion_like"
+    name = "reflexion"
 
     def __init__(self):
         self.iteration = 0
@@ -80,10 +80,10 @@ class ReflexionLikeMethod:
         self.prompt = "\n".join(lines)
 
 
-class VoyagerLikeMethod:
-    """Agent-only skill memory baseline inspired by persistent skill libraries."""
+class VoyagerMethod:
+    """Task-adapted Voyager baseline with an agent-only persistent skill library."""
 
-    name = "voyager_like"
+    name = "voyager"
 
     def __init__(self):
         self.iteration = 0
@@ -185,7 +185,7 @@ class OfficialSkillOptArtifactMethod:
         Path(path).write_text(self.prompt + "\n", encoding="utf-8")
 
 
-class AgentSkillOnlyMethod(VoyagerLikeMethod):
+class AgentSkillOnlyMethod(VoyagerMethod):
     """Ablation: our agent recovery skill library without WM spec evolution."""
 
     name = "agent_skill_only"

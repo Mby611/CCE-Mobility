@@ -6,10 +6,10 @@
 | --- | --- | --- |
 | No evolution | Same task adapter, no learned memory | None |
 | [Official SkillOpt](https://github.com/microsoft/SkillOpt) | Upstream trainer with the supplied task adapter | Artifact frozen after training/selection |
-| [Reflexion](https://github.com/noahshinn/reflexion)-like | Task-adapted reflection memory in `methods/baselines.py` | Online, after each scored case |
-| [Voyager](https://github.com/MineDojo/Voyager)-like | Task-adapted reusable skill memory in `methods/baselines.py` | Online, after each scored case |
+| [Reflexion](https://github.com/noahshinn/reflexion) | Task-adapted reflection memory in `methods/baselines.py` | Online, after each scored case |
+| [Voyager](https://github.com/MineDojo/Voyager) | Task-adapted reusable skill memory in `methods/baselines.py` | Online, after each scored case |
 
-Reflexion-like and Voyager-like are not upstream-environment reproductions. Identify them explicitly as adaptations, and report their online information access and evaluation order separately from frozen methods. Baselines use the same configured Agent, WM and Judge endpoints; do not transfer a learned artifact between backbone models as a matched baseline.
+Reflexion and Voyager are adapted to mobility planning and recovery in this repository. These implementations do not reproduce the original upstream environments. Report their online information access and evaluation order separately from frozen methods. Baselines use the same configured Agent, WM and Judge endpoints; do not transfer a learned artifact between backbone models as a matched baseline.
 
 ## TravelPlanner Comparison
 
@@ -20,8 +20,8 @@ uv run python -m cce_mobility.workflows.public.baselines \
   --experiment configs/generated/tp.json \
   --output configs/generated/tp_baselines
 uv run cce run-config configs/generated/tp_baselines/no_evolution.json
-uv run cce run-config configs/generated/tp_baselines/reflexion_like.json
-uv run cce run-config configs/generated/tp_baselines/voyager_like.json
+uv run cce run-config configs/generated/tp_baselines/reflexion.json
+uv run cce run-config configs/generated/tp_baselines/voyager.json
 ```
 
 These runs execute their own factual planning and retain those outputs. They do not relabel CCE's shared no-evolution factual contexts as method-specific official results. Match `(sample_id, intervention_id)` and disclose any differing factual context when interpreting paired recovery comparisons.
@@ -56,7 +56,7 @@ For SkillOpt + CCE, create a new experiment with `cce prepare-config --base-agen
 
 ## MobilityBench Baselines
 
-Use official factual traces and frozen challenges from the [MB workflow](reproducibility/mobilitybench.md). The module `cce_mobility.workflows.mobilitybench.run_mobilitybench_official_continuation` accepts the same locked runtime/prompt/case inputs with empty Agent memory for no-evolution. For online adaptations, `cce_mobility.workflows.mobilitybench.run_mobilitybench_official_prequential` exposes the two task-adapted baseline methods; invoke it with `python -m MODULE --help` and provide the same factual/case inputs. This posthoc baseline interface is not the CCE continuation training loop. Its result scope must be disclosed separately.
+Use official factual traces and frozen challenges from the [MB workflow](reproducibility/mobilitybench.md). The module `cce_mobility.workflows.mobilitybench.run_mobilitybench_official_continuation` accepts the same locked runtime/prompt/case inputs with empty Agent memory for no-evolution. For online adaptations, `cce_mobility.workflows.mobilitybench.run_mobilitybench_official_prequential` accepts `--method reflexion` or `--method voyager`; invoke it with `python -m MODULE --help` and provide the same factual/case inputs. This posthoc baseline interface is not the CCE continuation training loop. Its result scope must be disclosed separately.
 
 The official SkillOpt MB adapter is `src/cce_mobility/integrations/skillopt_mobilitybench.py`; its example YAML is in `configs/baselines/` and its dataset materializer is `cce_mobility.workflows.baselines.materialize_official_skillopt_mobilitybench_dataset`. Its upstream trainer environment is likewise separate. These public provider combinations have not all been live-tested; connectivity and paid smoke are required before formal runs.
 

@@ -16,11 +16,11 @@
     },
     {
       "path": "README.md",
-      "sha256": "241ba7434a511e77f551243067fa55b352b9376fb9f2378be7a29ec2b5a6d0e2"
+      "sha256": "fa8dd485440db7af55eb931ed2e1e2277a76ee51782de1486fc0ab0c5f9d819c"
     },
     {
       "path": "README.zh-CN.md",
-      "sha256": "c3becd40e898f47fcda704785cfc422f7c64c38c0995f767e937a7df0aa1d780"
+      "sha256": "4ea28b746c1acd900316c743d3a20300250e2c9b684c596d9d1c462e05b06522"
     },
     {
       "path": "THIRD_PARTY.md",
@@ -92,7 +92,7 @@
     },
     {
       "path": "docs/baselines.md",
-      "sha256": "dcaa50782ca3f1d58629f38fb11eb620fbbc3579ee11482952848820fca7b209"
+      "sha256": "1aa96da9adb23d6b9cf7b453ad537cc155ae43dc6d503b68bbe22be6d3ceea33"
     },
     {
       "path": "docs/development.md",
@@ -336,11 +336,11 @@
     },
     {
       "path": "src/cce_mobility/methods/baselines.py",
-      "sha256": "c4b0864a3ebdccd26afcbb68b0b6924c0cdab3c7ae0d1f557a7c12a571ffd789"
+      "sha256": "2aab175fe9309cb23a8af3183960282204923e4ab5420b60fa91e6238ded00b5"
     },
     {
       "path": "src/cce_mobility/methods/factory.py",
-      "sha256": "590ad5b18cf44376d5d64d68839b12caeeeafa4fd90fafc2210877b9afe2fde0"
+      "sha256": "ed0a9895ce5cde4e683b16248df46f6baebd8e40ea929ac4751e3d33e7cc4617"
     },
     {
       "path": "src/cce_mobility/methods/formal_coevolution.py",
@@ -476,7 +476,7 @@
     },
     {
       "path": "src/cce_mobility/workflows/mobilitybench/run_mobilitybench_official_prequential.py",
-      "sha256": "5bfa593b0e8968f3d934990ff3be57f6f8dafe063d142139e080bf54db95d7d0"
+      "sha256": "4cd6e7bf009f118cd16b9c1b61f0ec4e9ddf727818b4ede37a23b4a1a01d6973"
     },
     {
       "path": "src/cce_mobility/workflows/mobilitybench/summarize_mobilitybench_official_metrics.py",
@@ -496,7 +496,7 @@
     },
     {
       "path": "src/cce_mobility/workflows/public/baselines.py",
-      "sha256": "35c28fef037ec0667a5b6cd8f07d3a069e7eb7bca60915c05913d03e7d4159e2"
+      "sha256": "660f1202869e78c558e192ce6f8fc71c24c45766aa75aa89df6234ecd9ad4015"
     },
     {
       "path": "src/cce_mobility/workflows/public/configuration.py",
@@ -624,7 +624,7 @@
     },
     {
       "path": "tests/integration/test_mobilitybench_official_prequential.py",
-      "sha256": "6b2f1370669b17095a85b1fe606dc61c20d9af24ef2fd5d87230a8b2405cf3af"
+      "sha256": "8ef1b1a68dcf3ce8c5cd889273e7328783ba46652ea9cc5bc4203ec6a2cc1fd5"
     },
     {
       "path": "tests/integration/test_mobilitybench_official_smoke.py",
@@ -644,7 +644,7 @@
     },
     {
       "path": "tests/integration/test_public_workflow.py",
-      "sha256": "5e184abf4ba16281f65bbc69ccedcfa355625e5cbcc5740576c894c0949154bd"
+      "sha256": "6bf741094849462699ecb92bbda84c0ef0712c21f7ad7f180c63622c1f7ba47c"
     },
     {
       "path": "tests/smoke/test_offline_entrypoints.py",

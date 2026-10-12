@@ -149,7 +149,7 @@ See [metric definitions](docs/metrics.md) and [evaluation protocol](docs/protoco
 
 ## Baselines
 
-[SkillOpt](https://github.com/microsoft/SkillOpt) uses its **upstream trainer** through our task adapters. [Reflexion](https://github.com/noahshinn/reflexion) and [Voyager](https://github.com/MineDojo/Voyager) comparisons are **task-adapted recovery implementations**, not executions of those repositories without modification.
+[SkillOpt](https://github.com/microsoft/SkillOpt) uses its **upstream trainer** through our task adapters. We adapt [Reflexion](https://github.com/noahshinn/reflexion) and [Voyager](https://github.com/MineDojo/Voyager) to mobility planning and recovery. These baselines retain online memory updates and are not reproductions of the original upstream environments.
 
 See [baseline and complementarity commands](docs/baselines.md). Co-evolution and memory-curation ablations use `--variant agent-only` or `--variant without-memory-curation`; the latter still performs final same-challenge re-evaluation and Fail-to-Fail filtering. It does not remove that residual gate.
 

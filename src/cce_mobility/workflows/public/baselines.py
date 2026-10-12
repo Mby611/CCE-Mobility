@@ -19,7 +19,7 @@ def prepare(config_path: Path, destination: Path, skillopt: Path | None = None) 
         raise FileNotFoundError("Complete the CCE frozen test before preparing matched baselines")
     config = _tp_challenges(config, "test", require_existing=True)
     created = []
-    for method in ("no_evolution", "reflexion_like", "voyager_like", "official_skillopt"):
+    for method in ("no_evolution", "reflexion", "voyager", "official_skillopt"):
         if method == "official_skillopt" and skillopt is None:
             continue
         value = _holdout_eval_config(
@@ -31,7 +31,7 @@ def prepare(config_path: Path, destination: Path, skillopt: Path | None = None) 
         )
         value["output_dir"] = str(Path(config["output_root"]) / "baselines")
         value["extra"]["freeze_method"] = method in {"no_evolution", "official_skillopt"}
-        value["extra"]["save_skill_memory"] = method in {"reflexion_like", "voyager_like"}
+        value["extra"]["save_skill_memory"] = method in {"reflexion", "voyager"}
         value["extra"]["agent_owned_retrieval"] = False
         if method == "official_skillopt":
             value["extra"]["base_agent_guidance_path"] = str(skillopt.resolve())

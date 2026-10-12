@@ -1,8 +1,8 @@
 from cce_mobility.methods.baselines import (
     AgentSkillOnlyMethod,
     OfficialSkillOptArtifactMethod,
-    ReflexionLikeMethod,
-    VoyagerLikeMethod,
+    ReflexionMethod,
+    VoyagerMethod,
     WMSpecOnlyMethod,
 )
 from cce_mobility.methods.no_evolution import NoEvolutionMethod
@@ -23,8 +23,8 @@ def create_method(name: str):
         "agent_only": AgentSkillOnlyMethod,
         "wm_spec_only": WMSpecOnlyMethod,
         "official_skillopt": OfficialSkillOptArtifactMethod,
-        "reflexion_like": ReflexionLikeMethod,
-        "voyager_like": VoyagerLikeMethod,
+        "reflexion": ReflexionMethod,
+        "voyager": VoyagerMethod,
     }
     if name.lower() not in methods:
         raise ValueError(f"Unknown method: {name}; choose a published method or named ablation")

@@ -8,6 +8,7 @@ from types import SimpleNamespace
 
 import pytest
 
+from cce_mobility.methods.factory import create_method
 from cce_mobility.workflows.public.configuration import prepare_config, validate_models
 from cce_mobility.workflows.public.data import prepare_data
 from cce_mobility.workflows.public.pipeline import run_stage
@@ -21,6 +22,16 @@ def models():
         "world_model": acting,
         "judge": {"model": "offline-judge", "provider": "placeholder"},
     }
+
+
+@pytest.mark.parametrize("method_name", ["reflexion", "voyager"])
+def test_public_baseline_names_resolve_and_memory_can_be_frozen(method_name):
+    method = create_method(method_name)
+    assert method.name == method_name
+    assert create_method(method_name.upper()).name == method_name
+    method.before_iteration([])
+    method.freeze()
+    assert method.frozen is True
 
 
 def dataset(tmp_path):
@@ -165,8 +176,18 @@ def test_public_training_validation_test_are_same_config(tmp_path):
     from cce_mobility.workflows.public.baselines import prepare
 
     files = prepare(args.output, tmp_path / "baseline_configs")
-    assert len(files) == 3
-    assert json.loads(files[1].read_text())["extra"]["freeze_method"] is False
+    assert [path.name for path in files] == [
+        "no_evolution.json",
+        "reflexion.json",
+        "voyager.json",
+    ]
+    for path in files:
+        baseline = json.loads(path.read_text())
+        assert baseline["method"] == path.stem
+        assert create_method(baseline["method"]).name == path.stem
+        online = path.stem in {"reflexion", "voyager"}
+        assert baseline["extra"]["freeze_method"] is not online
+        assert baseline["extra"]["save_skill_memory"] is online
 
 
 def test_official_compatibility_patch_only_changes_loader_and_denominators():
