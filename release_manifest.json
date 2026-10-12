@@ -8,7 +8,7 @@
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "sha256": "505fd647f4670dad2ff7a4199f0cb2c0547670f606d795da8ad059c8cea666e2"
+      "sha256": "ee91700eb2b61f9d905c149b4ece9f18e60254337f0db0a96c3e92855b7bd282"
     },
     {
       "path": "LICENSE",
@@ -96,7 +96,7 @@
     },
     {
       "path": "docs/development.md",
-      "sha256": "d4beb3f3fa27ef0359d8d8fa4114754b9906543b449ac8106d7b9e3e167849bb"
+      "sha256": "c826e7dada4182d4765fff73ec4a3d97d97a24e2be2ca1200d585cf8cc2331d4"
     },
     {
       "path": "docs/getting-started.md",
@@ -160,7 +160,7 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "f5dfaf637d1c0ef66176a9fdfba4183aff8a6ac65f33ec871f40934404248502"
+      "sha256": "491a4037965369b28c7448b22fc6fd3e090efad2ae23f3dc98bdfd3f476c41e9"
     },
     {
       "path": "scripts/run_mobilitybench_official_smoke.sh",
@@ -636,7 +636,7 @@
     },
     {
       "path": "tests/integration/test_public_release_candidate.py",
-      "sha256": "40f631b1a667da43532439b2a1cc17d495b0dc52d01289db438dfdc5a64a0c9f"
+      "sha256": "387e704eabb3c69d1cb9ac6a21d271a64dbe7a7982d977c40779c32ffccff2f4"
     },
     {
       "path": "tests/integration/test_publication_security.py",
@@ -704,7 +704,7 @@
     },
     {
       "path": "uv.lock",
-      "sha256": "2e7f13a02ce922a83e229dcc6b3c7ee9b7231e682bb4c8aea8ee0ad6fb50092c"
+      "sha256": "c8c389194bed3e0a017bdf443d950a7c216ed0a07857f39d1b81ef74780255e7"
     },
     {
       "path": ".gitignore",

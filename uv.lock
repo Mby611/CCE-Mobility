@@ -205,7 +205,7 @@ requires-dist = [
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.0" },
     { name = "pyyaml", marker = "extra == 'mobilitybench'", specifier = ">=6.0" },
     { name = "requests", marker = "extra == 'travelplanner'", specifier = ">=2.0" },
-    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.6" },
+    { name = "ruff", marker = "extra == 'dev'", specifier = "==0.15.17" },
     { name = "tqdm", marker = "extra == 'travelplanner'", specifier = ">=4.0" },
 ]
 provides-extras = ["mobilitybench", "data", "travelplanner", "upstream-data", "dev"]

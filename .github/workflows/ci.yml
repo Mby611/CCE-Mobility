@@ -19,7 +19,11 @@ jobs:
       - name: Test
         run: python -m pytest -q
       - name: Lint
-        run: ruff check . && ruff format --check .
+        run: |
+          ruff --version
+          ruff check .
+      - name: Format
+        run: ruff format --check .
       - name: Offline synthetic smoke
         run: cce run-config configs/smoke/travelplanner_offline.json
       - name: Offline MobilityBench smoke

@@ -1,4 +1,5 @@
 from pathlib import Path
+import tomllib
 
 import pytest
 
@@ -7,6 +8,19 @@ from tools.build_public_candidate import (
     preflight,
     verify_candidate,
 )
+
+
+def test_lint_version_and_policy_match_the_lockfile() -> None:
+    root = Path(__file__).resolve().parents[2]
+    project = tomllib.loads((root / "pyproject.toml").read_text())
+    lock = tomllib.loads((root / "uv.lock").read_text())
+    ruff = project["tool"]["ruff"]
+    requirement = ruff["required-version"]
+    assert requirement.startswith("==")
+    assert f"ruff{requirement}" in project["project"]["optional-dependencies"]["dev"]
+    locked_ruff = next(package for package in lock["package"] if package["name"] == "ruff")
+    assert locked_ruff["version"] == requirement.removeprefix("==")
+    assert ruff["lint"]["select"] == ["E4", "E7", "E9", "F"]
 
 
 def _fixture(tmp_path: Path, name: str, content: str) -> tuple[Path, Path]:

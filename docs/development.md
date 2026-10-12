@@ -34,7 +34,9 @@ cce --help
 cce run-config configs/smoke/travelplanner_offline.json
 cce run-config configs/smoke/mobilitybench_mock.json
 python -m pytest -q
+ruff --version
 ruff check .
+ruff format --check .
 python tools/audit_publication.py
 python tools/build_public_candidate.py --output-dir /tmp/cce-source-check
 python tools/build_public_candidate.py --verify-dir /tmp/cce-source-check
@@ -60,7 +62,9 @@ workflow copies.
 
 The exporter uses an explicit allowlist, scans sensitive content, permits reviewed paper PNGs only, refuses symlinks and existing destinations, and writes SHA-256 hashes. It does not copy Git history, local keys, runtime configs, datasets or output artifacts. Core source fingerprints exclude the ignored local key file; generated configs and model settings remain outside tracked-source integrity scope.
 
-CI runs Python 3.12 tests, lint, offline TP/MB smoke, link/table checks and clean export. Network/provider/upstream runtime acceptance is separately documented; CI does not use secrets or rerun formal experiments.
+Development installs pin Ruff to `0.15.17`, matching `uv.lock`. The configuration also enforces that version and explicitly selects the established `E4`, `E7`, `E9` and `F` lint rules, so local and CI checks use the same policy. Upgrade the pin, lockfile and required version together when adopting a new Ruff release.
+
+CI runs Python 3.12 tests, separate lint/format checks, offline TP/MB smoke, link/table checks and clean export. Network/provider/upstream runtime acceptance is separately documented; CI does not use secrets or rerun formal experiments.
 
 The publication audit scans the worktree, exact Git index and every locally reachable
 commit, including deleted files. It rejects files outside the explicit allowlist,
